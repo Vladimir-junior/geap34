@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geo App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+<h2>Динамическая форма</h2>
+<form method="POST">
+    <div id="dynamicInputs">
+        <input type="text" name="input0" placeholder="Введите значение">
+    </div>
+    <button type="button" id="addInput">Добавить поле</button>
+
+    <h3>Выделите область на карте:</h3>
+    <div id="map" style="height: 400px;"></div>
+
+    <input type="hidden" name="area" id="areaInput">
+    <br>
+    <button type="submit">Сохранить</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

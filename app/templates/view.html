@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Просмотр данных</title>
+</head>
+<body>
+    <h2>Сохраненные данные</h2>
+    {% for entry in entries %}
+        <pre>{{ entry.data | tojson(indent=2) }}</pre>
+        <p>Координаты области: {{ entry.area }}</p>
+        <hr>
+    {% endfor %}
+    <a href="/">Назад</a>
+</body>
+</html>
